@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My test for Vanilla Javascript async await</title>
+    <script type="module" src="index.js" defer></script>
+    <script src="sequential.js" type="module" defer></script>
+    <script src="concurrent.js" type="module" defer></script>
+    <script src="parallel.js" type="module" defer></script>
+
+    <style>
+      #root {
+        width: 80%;
+      }
+      #root,
+      body,
+      header,
+      section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      p {
+        text-align: center;
+      }
+      button {
+        width: 130px;
+        height: 30px;
+        margin: 5px;
+        border-radius: 9px;
+        background-color: teal;
+        color: white;
+      }
+      ul {
+        padding: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="root">
+      <header>
+        <h1>Async funtions with await</h1>
+        <p>GOALS. Testing the await in 2 ways: sequential and parallel.</p>
+      </header>
+      <section>
+        <ul id="list"></ul>
+        <div id="message"></div>
+        <div><button id="sequentialButton">Sequential</button></div>
+        <div><button id="concurrentButton">Concurrent</button></div>
+        <div><button id="parallelButton">Parallel</button></div>
+      </section>
+    </div>
+  </body>
+</html>
