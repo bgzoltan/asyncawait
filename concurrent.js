@@ -1,7 +1,7 @@
 import { hello1 } from "./hello1.js";
 import { hello2 } from "./hello2.js";
 
-export function concurrent() {
+export function concurrent(message, result) {
   async function concurrent() {
     let secondsStart = new Date().getSeconds();
 
@@ -11,8 +11,10 @@ export function concurrent() {
     console.log(await promise2);
 
     let secondsEnd = new Date().getSeconds();
-    console.log(`It has taken: ${secondsEnd - secondsStart} s`);
+    result.innerText = `It has taken: ${secondsEnd - secondsStart} s`;
   }
+  message.innerHTML = "<h1>The two concurrent functions are running</h1>";
+  result.innerText = ``;
   console.log("Concurrent function");
   concurrent();
 }

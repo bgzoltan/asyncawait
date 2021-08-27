@@ -1,7 +1,7 @@
 import { hello1 } from "./hello1.js";
 import { hello2 } from "./hello2.js";
 
-export function sequential() {
+export function sequential(message, result) {
   async function sequent() {
     let secondsStart = new Date().getSeconds();
 
@@ -12,7 +12,10 @@ export function sequential() {
 
     let secondsEnd = new Date().getSeconds();
     console.log(`It has taken: ${secondsEnd - secondsStart} s`);
+    result.innerText = `It has taken: ${secondsEnd - secondsStart} s`;
   }
-  console.log("Sequential function");
+  message.innerHTML = "<h1>The two sequential functions are running...</h1>";
+  result.innerText = ``;
+  console.log("Sequential function ***");
   sequent();
 }

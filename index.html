@@ -11,7 +11,7 @@
     <script src="parallel.js" type="module" defer></script>
 
     <style>
-      #root {
+      a #root {
         width: 80%;
       }
       #root,
@@ -37,18 +37,26 @@
       ul {
         padding: 10px;
       }
+
+      #result {
+        color: red;
+        font-weight: 700;
+      }
     </style>
   </head>
 
   <body>
     <div id="root">
       <header>
-        <h1>Async funtions with await</h1>
-        <p>GOALS. Testing the await in 2 ways: sequential and parallel.</p>
+        <h1>Javascript async await</h1>
+        <p>
+          GOALS: testing "async await" in 3 different ways: sequential,
+          concurrent and parallel invoke. You can check it on consol.
+        </p>
       </header>
       <section>
-        <ul id="list"></ul>
         <div id="message"></div>
+        <div id="result"></div>
         <div><button id="sequentialButton">Sequential</button></div>
         <div><button id="concurrentButton">Concurrent</button></div>
         <div><button id="parallelButton">Parallel</button></div>
