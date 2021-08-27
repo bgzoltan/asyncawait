@@ -8,6 +8,6 @@ const parButton = document.getElementById("parallelButton");
 const message = document.getElementById("message");
 const result = document.getElementById("result");
 
-seqButton.addEventListener("click", () => sequential(message, result));
+seqButton.addEventListener("click", () => sequential(message, result), false);
 conButton.addEventListener("click", () => concurrent(message, result));
 parButton.addEventListener("click", () => parallel(message, result));
